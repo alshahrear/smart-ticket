@@ -3,3 +3,21 @@
 .font-inner{
     font-family: 'Inter', sans-serif;
 }
+.bus-container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    
+}
+.seat {
+    width: 80px;
+      height: 40px;
+      background-color: #F7F8F8;
+      color: #03071280;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
