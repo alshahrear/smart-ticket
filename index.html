@@ -10,9 +10,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="font-inner">
-    <header class="max-w-screen-lg m-auto">
-        <div class="navbar bg-base-100">
+<body class="font-inner bg-white">
+    <header class="max-w-screen-lg m-auto ">
+        <div class="navbar bg-base-100 mb-5">
             <div class="navbar-start">
                 <div class="dropdown">
                     <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -46,19 +46,49 @@
             </div>
         </div>
         <section>
-            <div class="space-y-8 place-content-center text-center bg-cover bg-center bg-no-repeat h-screen rounded-3xl"
+            <div class="space-y-8 place-content-center text-center bg-cover bg-center bg-no-repeat h-screen rounded-3xl relative"
                 style="background-image: url('images/banner.png')">
                 <h1 class="text-white text-5xl font-black mb-4 ">End-to-End Travel with <br><span
                         class="text-[#1DD100]">P Paribahan</span></h1>
                 <p class="text-white mb-6">Yes, you can run unit tests and view the results directly within the app.
                     <br> The integrated testing features allow for a streamlined</p>
-                <button class="btn bg-[#1DD100] border-0">Buy Tickets</button>
+                <button class="btn bg-[#1DD100] font-extrabold border-0">Buy Tickets</button>
+            </div>
+            <!-- 500k -->
+            <div class="flex justify-evenly gap-5 absolute -mt-16 ml-32">
+                <div class="flex bg-white border-b-2 border-[#1DD100] items-center p-6 rounded-2xl">
+                    <div class="pr-2">
+                        <img src="images/ticket-cupon.png" alt="">
+                    </div>
+                    <div>
+                        <h4 class="text-3xl font-bold">1.7 lacks</h4>
+                        <p>Tickets sold</p>
+                    </div>
+                </div>
+                <div class="flex bg-white border-b-2 border-[#1DD100] items-center p-6 rounded-2xl">
+                    <div class="pr-2">
+                        <img src="images/stoppage.png" alt="">
+                    </div>
+                    <div>
+                        <h4 class="text-3xl font-bold">80K+</h4>
+                        <p>Rental partners</p>
+                    </div>
+                </div>
+                <div class="flex bg-white border-b-2 border-[#1DD100] items-center p-6 rounded-2xl">
+                    <div class="pr-2">
+                        <img src="images/people.png" alt="">
+                    </div>
+                    <div>
+                        <h4 class="text-3xl font-bold">500K+</h4>
+                        <p>Registered users</p>
+                    </div>
+                </div>
             </div>
         </section>
     </header>
-    <main class="max-w-screen-lg m-auto">
+    <main class="max-w-screen-lg m-auto ">
         <section>
-            <h2 class="m-6 text-3xl font-bold text-center">Best offers for you</h2>
+            <h2 class="m-6 mt-24 text-3xl font-bold text-center">Best offers for you</h2>
             <div>
                 <div class="flex justify-between">
                     <div class="bg-[#FFBF0F] flex items-center rounded-xl px-20 ">
@@ -91,140 +121,207 @@
                     </div>
                 </div>
             </div>
-            <div class="text-center m-8">
+            <div class="text-center m-10 mb-20">
                 <button class="btn bg-white border-green-500 text-[#1DD100]">See All Offers</button>
             </div>
         </section>
     </main>
     <!-- Paribahan section -->
     <main class="bg-[#F7F8F8] rounded-3xl border-t-2 border-[#1DD100]">
-        <div class="text-center p-12 space-y-2">
+        <div class="text-center p-10 space-y-2">
             <h2 class="text-3xl font-extrabold">P.H Paribahan</h2>
             <p>Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing
                 features allow for a streamlined .</p>
         </div>
-        <section class="bg-white max-w-screen-lg m-auto flex rounded-2xl ">
-            <div class="p-8">
-                <div class="pb-5 ">
-                    <div class="flex justify-between">
-                        <div class="flex">
-                            <img src="images/bus-logo.png" alt="">
-                            <div class="pl-2">
-                                <h3 class="text-2xl text-[#030712] font-bold">Greenline Paribahan</h3>
-                                <p>Coach-009-WEB ! AC_Business</p>
+            <section class="bg-white max-w-screen-lg m-auto flex rounded-2xl ">
+                <div class="p-8">
+                    <div class="pb-5 ">
+                        <div class="flex justify-between">
+                            <div class="flex">
+                                <img src="images/bus-logo.png" alt="">
+                                <div class="pl-2">
+                                    <h3 class="text-2xl text-[#030712] font-bold">Greenline Paribahan</h3>
+                                    <p>Coach-009-WEB ! AC_Business</p>
+                                </div>
                             </div>
+                            <div>
+                                <a class="btn flex-row-reverse bg-[#1DD1001A] border-[#1DD10066] text-[#1DD100]">40 Seats left
+                                    <img class="" src="images/seat-green.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-[#F7F8F8] p-8 rounded-xl">
+                        <div class="flex justify-between border-dashed border-b-2 border-gray-300 pb-5">
+                            <p>Route</p>
+                            <p class="font-semibold">Dhaka - Sylhet</p>
                         </div>
                         <div>
-                            <a class="btn flex-row-reverse bg-[#1DD1001A] border-[#1DD10066] text-[#1DD100]">40 Seats left
-                                <img class="" src="images/seat-green.png" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-[#F7F8F8] p-8 rounded-xl">
-                    <div class="flex justify-between border-dashed border-b-2 border-gray-300 pb-5">
-                        <p>Route</p>
-                        <p>Dhaka - Sylhet</p>
-                    </div>
-                    <div>
-                        <div class="flex justify-between border-dashed border-b-2 border-gray-300 pt-5 pb-5">
-                            <p>Departure Time</p>
-                            <p>9:00 PM</p>
-                        </div>
-                        <div class="flex justify-between pt-5">
-                            <button class="btn">Boarding Point - Laxmipur</button>
-                            <button class="btn">Dropping Point - Bogura</button>
-                            <button class="btn">Est. Time - 11 Hour</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="flex ">
-                    <img src="images/info-devider.png" alt="">
-                </div>
-                <div class=" space-y-2 pl-20 place-content-center">
-                    <img src="images/fare.png" alt="">
-                    <h4 class="text-2xl font-bold">550 Taka</h4>
-                    <p>Per Seat</p>
-                </div>
-            </div>
-        </section>
-        <!-- seat section -->
-         <section class="max-w-screen-lg m-auto bg-white p-8 rounded-2xl mt-7 ">
-            <div class="border-dashed  border-r-2 border-gray-400">
-                <div class="pr-28">
-                    <h4 class="font-bold border-dashed border-b-2 border-y-gray-300 pb-4">Select Your Seat</h4>
-                    <div class="">
-                        <div class="flex justify-between border-dashed border-b-2 border-y-gray-300">
-                            <div class="flex items-center ">
-                            <img class="max-w-10" src="images/seat-gray.png" alt="">
-                            <p class="pb-4 pt-4 pl-2">Available</p>
+                            <div class="flex justify-between border-dashed border-b-2 border-gray-300 pt-5 pb-5">
+                                <p>Departure Time</p>
+                                <p class="font-semibold">9:00 PM</p>
                             </div>
-                            <div class="flex items-center">
-                                <img class="max-w-10" src="images/seat-green.png" alt="">
-                                <p class="pl-2">Selected</p>
+                            <div class="flex justify-around pt-5">
+                                <button class="btn">Boarding Point - Laxmipur</button>
+                                <button class="btn">Dropping Point - Bogura</button>
+                                <button class="btn">Est. Time - 11 Hour</button>
                             </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <section>
-                <div class="bus-container">
-                    <div class="A">A</div>
-                    <div class="seat">A1</div>
-                    <div class="seat">A2</div>
-                    <div class="seat">A3</div>
-                    <div class="seat">A4</div>
-                    <div class="B">B</div>
-                    <div class="seat">B1</div>
-                    <div class="seat">B2</div>
-                    <div class="seat">B3</div>
-                    <div class="seat">B4</div>
-                    <div class="C">C</div>
-                    <div class="seat">C1</div>
-                    <div class="seat">C2</div>
-                    <div class="seat">C3</div>
-                    <div class="seat">C4</div>
-                    <div class="D">D</div>
-                    <div class="seat">D1</div>
-                    <div class="seat">D2</div>
-                    <div class="seat">D3</div>
-                    <div class="seat">D4</div>
-                    <div class="E">E</div>
-                    <div class="seat">E1</div>
-                    <div class="seat">E2</div>
-                    <div class="seat">E3</div>
-                    <div class="seat">E4</div>
-                    <div class="F">F</div>
-                    <div class="seat">F1</div>
-                    <div class="seat">F2</div>
-                    <div class="seat">F3</div>
-                    <div class="seat">F4</div>
-                    <div class="G">G</div>
-                    <div class="seat">G1</div>
-                    <div class="seat">G2</div>
-                    <div class="seat">G3</div>
-                    <div class="seat">G4</div>
-                    <div class="H">H</div>
-                    <div class="seat">H1</div>
-                    <div class="seat">H2</div>
-                    <div class="seat">H3</div>
-                    <div class="seat">H4</div>
-                    <div class="I">I</div>
-                    <div class="seat">I1</div>
-                    <div class="seat">I2</div>
-                    <div class="seat">I3</div>
-                    <div class="seat">I4</div>
-                    <div class="J">J</div>
-                    <div class="seat">J1</div>
-                    <div class="seat">J2</div>
-                    <div class="seat">J3</div>
-                    <div class="seat">J4</div>
-                  </div>
+                <div class="flex ">
+                        <img src="images/info-devider.png" alt="">
+                    </div>
+                    <div class=" space-y-2 pl-20 place-content-center">
+                        <img src="images/fare.png" alt="">
+                        <h4 class="text-2xl font-bold">550 Taka</h4>
+                        <p>Per Seat</p>
+                    </div>
+                </div>
             </section>
-         </section>
+<!-- seat section -->
+<div class="container max-w-screen-lg m-auto pt-5 pb-20">
+    <div class="seat-selection  flex justify-around">
+        <div>
+            <h3 class="font-bold border-dashed border-b-2 border-y-gray-300 pb-4">Select Your Seat</h3>
+            <div class="flex justify-between border-dashed border-b-2 border-y-gray-300">
+                <div class="flex items-center ">
+                    <img class="max-w-10" src="images/seat-gray.png" alt="">
+                    <p class="pb-4 pt-4 pl-2">Available</p>
+                    </div>
+                    <div class="flex items-center">
+                        <img class="max-w-10" src="images/seat-green.png" alt="">
+                        <p class="pl-2">Selected</p>
+                    </div>
+            </div>
+            <div class=" vendor flex justify-end pt-3">
+                <img src="images/Vector.png" alt="">
+            </div>
+            <div class="seat-map">
+                <div class="single-row">A</div>
+                <div class="seat">A1</div>
+                <div class="seat">A2</div>
+                <div class="seat">A3</div>
+                <div class="seat">A4</div>
+                <div class="single-row">B</div>
+                <div class="seat">B1</div>
+                <div class="seat">B2</div>
+                <div class="seat">B3</div>
+                <div class="seat">B4</div>
+                <div class="single-row">C</div>
+                <div class="seat">C1</div>
+                <div class="seat">C2</div>
+                <div class="seat">C3</div>
+                <div class="seat">C4</div>
+                <div class="single-row">D</div>
+                <div class="seat">D1</div>
+                <div class="seat">D2</div>
+                <div class="seat">D3</div>
+                <div class="seat">D4</div>
+                <div class="single-row">E</div>
+                <div class="seat">E1</div>
+                <div class="seat">E2</div>
+                <div class="seat">E3</div>
+                <div class="seat">E4</div>
+                <div class="single-row">F</div>
+                <div class="seat">F1</div>
+                <div class="seat">F2</div>
+                <div class="seat">F3</div>
+                <div class="seat">F4</div>
+                <div class="single-row">G</div>
+                <div class="seat">G1</div>
+                <div class="seat">G2</div>
+                <div class="seat">G3</div>
+                <div class="seat">G4</div>
+                <div class="single-row">H</div>
+                <div class="seat">H1</div>
+                <div class="seat">H2</div>
+                <div class="seat">H3</div>
+                <div class="seat">H4</div>
+                <div class="single-row">I</div>
+                <div class="seat">I1</div>
+                <div class="seat">I2</div>
+                <div class="seat">I3</div>
+                <div class="seat">I4</div>
+                <div class="single-row">J</div>
+                <div class="seat">J1</div>
+                <div class="seat">J2</div>
+                <div class="seat">J3</div>
+                <div class="seat">J4</div>
+            </div>
+        </div>
+        <div class="form border-l-2 border-dashed border-gray-300 pl-28">
+            <h3 class="font-bold border-dashed border-b-2 border-y-gray-300 pb-4">Select Your Seat</h3>
+            <div class="pt-5">
+                <div class="bg-[#F7F8F8] p-5 rounded-xl">
+                    <div class="flex justify-between border-b-2 border-dashed border-gray-300 pt-3 pb-3">
+                        <div>
+                            <p class="font-bold">Seat <span class="bg-[#1DD100] text-white pl-2 pr-2 rounded-lg">2</span></p>
+                        </div>
+                        <div>
+                            <p class="font-bold">Class</p>
+                        </div>
+                        <div>
+                            <p class="font-bold">Price</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between pt-2">
+                        <div>
+                            <p>C2</p>
+                        </div>
+                        <div>
+                            <p>Economoy</p>
+                        </div>
+                        <div>
+                            <p>550</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between pt-2 border-b-2 border-gray-300 pb-3">
+                        <div>
+                            <p>C2</p>
+                        </div>
+                        <div>
+                            <p>Economoy</p>
+                        </div>
+                        <div>
+                            <p>550</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between pt-3 pb-3">
+                        <div>
+                            <p class="font-bold">Total Price</p>
+                        </div>
+                        <div>
+                            <p class="font-bold">BDT 1100</p>
+                        </div>
+                    </div>
+                    <div id="btn-container">
+                        <input class="" id="input-coupon" type="text"
+                        placeholder="Have any coupon?">
+                        <button id="btn-apply">Apply</button>
+                    </div>
+                    <div class="flex justify-between">
+                        <p class="font-bold">Grand Total</p>
+                        <p class="font-bold">BDT 1100</p>
+                    </div>
+                </div>
+            </div>
+            <p class="font-bold pt-3 pb-2">Passenger Name*</p>
+            <input type="text" placeholder="Enter your name">
+            <p class="font-bold pb-2">Phone Number*</p>
+            <input type="text" placeholder="Enter your Phone Number">
+            <p class="font-bold pb-2">Email ID</p>
+            <input type="email" placeholder="Enter your email id">
+            <button class="btn text-[#1DD100]">Next</button>
+            <div class="flex justify-between pt-3">
+                <a class="border-b-2">Terms & Conditions</a>
+                <a class="border-b-2">Cancellation Policy</a>
+            </div>
+        </div>
+    </div>
+</div>
     </main>
-
     <!-- footer -->
-    <footer class=" bg-[#030712] text-white mt-10 p-20">
+    <footer class=" bg-[#030712] text-white  p-20">
         <section class="flex justify-between border-b-2 border-dashed border-gray-200">
             <div class=" space-y-3">
                 <h2 class="text-2xl font-bold">P-Tickets</h2>
