@@ -52,7 +52,7 @@
                         class="text-[#1DD100]">P Paribahan</span></h1>
                 <p class="text-white mb-6">Yes, you can run unit tests and view the results directly within the app.
                     <br> The integrated testing features allow for a streamlined</p>
-                <button class="btn bg-[#1DD100] font-extrabold border-0">Buy Tickets</button>
+                <button id="buy-ticket" class="btn bg-[#1DD100] font-extrabold border-0">Buy Tickets</button>
             </div>
             <!-- 500k -->
             <div class="flex justify-evenly gap-5 absolute -mt-16 ml-32">
@@ -127,7 +127,7 @@
         </section>
     </main>
     <!-- Paribahan section -->
-    <main class="bg-[#F7F8F8] rounded-3xl border-t-2 border-[#1DD100]">
+    <main id="paribahan-section" class="bg-[#F7F8F8] rounded-3xl border-t-2 border-[#1DD100]">
         <div class="text-center p-10 space-y-2">
             <h2 class="text-3xl font-extrabold">P.H Paribahan</h2>
             <p>Yes, you can run unit tests and view the results directly within the app. The integrated <br> testing
@@ -145,7 +145,7 @@
                                 </div>
                             </div>
                             <div>
-                                <a class="btn flex-row-reverse bg-[#1DD1001A] border-[#1DD10066] text-[#1DD100]">40 Seats left
+                                <a class="btn flex-row-reverse bg-[#1DD1001A] border-[#1DD10066] text-[#1DD100]"><span id="seat-left-btn">40</span> Seats left
                                     <img class="" src="images/seat-green.png" alt=""></a>
                             </div>
                         </div>
@@ -255,7 +255,7 @@
                 <div class="bg-[#F7F8F8] p-5 rounded-xl">
                     <div class="flex justify-between border-b-2 border-dashed border-gray-300 pt-3 pb-3">
                         <div>
-                            <p class="font-bold">Seat <span class="bg-[#1DD100] text-white pl-2 pr-2 rounded-lg">2</span></p>
+                            <p class="font-bold">Seat <span id="seat-counter" class="bg-[#1DD100] text-white pl-2 pr-2 rounded-lg">0</span></p>
                         </div>
                         <div>
                             <p class="font-bold">Class</p>
@@ -266,7 +266,7 @@
                     </div>
                     <div class="flex justify-between pt-2">
                         <div>
-                            <p>C2</p>
+                            <p id="selected-seats">C2</p>
                         </div>
                         <div>
                             <p>Economoy</p>
@@ -275,7 +275,7 @@
                             <p>550</p>
                         </div>
                     </div>
-                    <div class="flex justify-between pt-2 border-b-2 border-gray-300 pb-3">
+                    <!-- <div class="flex justify-between pt-2 border-b-2 border-gray-300 pb-3">
                         <div>
                             <p>C2</p>
                         </div>
@@ -285,33 +285,37 @@
                         <div>
                             <p>550</p>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="flex justify-between pt-3 pb-3">
                         <div>
                             <p class="font-bold">Total Price</p>
                         </div>
                         <div>
-                            <p class="font-bold">BDT 1100</p>
+                            <p id="total-price" class="font-bold">BDT 0</p>
                         </div>
                     </div>
                     <div id="btn-container">
                         <input class="" id="input-coupon" type="text"
                         placeholder="Have any coupon?">
-                        <button id="btn-apply">Apply</button>
+                        <button disabled id="btn-apply">Apply</button>
                     </div>
                     <div class="flex justify-between">
                         <p class="font-bold">Grand Total</p>
-                        <p class="font-bold">BDT 1100</p>
+                        <p id="grand-total" class="font-bold">BDT 0</p>
                     </div>
                 </div>
             </div>
             <p class="font-bold pt-3 pb-2">Passenger Name*</p>
             <input type="text" placeholder="Enter your name">
-            <p class="font-bold pb-2">Phone Number*</p>
-            <input type="text" placeholder="Enter your Phone Number">
+            <!-- <p class="font-bold pb-2">Phone Number*</p>
+            <input id="phone" type="phone" placeholder="Enter your Phone Number"> -->
+            <div>
+                <label for="phone-number">Phone Number:</label>
+                <input type="text" id="phone-number" placeholder="Enter your phone number" />
+            </div>
             <p class="font-bold pb-2">Email ID</p>
             <input type="email" placeholder="Enter your email id">
-            <button class="btn text-[#1DD100]">Next</button>
+            <button id="next-button" class="btn text-[#1DD100]" disabled>Next</button>
             <div class="flex justify-between pt-3">
                 <a class="border-b-2">Terms & Conditions</a>
                 <a class="border-b-2">Cancellation Policy</a>
@@ -355,6 +359,8 @@
             </div>
         </section>
     </footer>
+
+    <script src="scripts/ticket.js"></script>
 </body>
 
 </html>

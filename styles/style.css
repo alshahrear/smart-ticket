@@ -55,8 +55,8 @@
         }
         .seat.selected {
             
-            background-color: #4caf50;
-            color: #03071280;
+            background-color: #1DD100;
+            color: #FFFFFF;
         }
         .seat:not(.selected):hover {
             background-color: #ddd;
