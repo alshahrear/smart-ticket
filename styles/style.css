@@ -43,8 +43,15 @@
             cursor: pointer;
             background-color: #F7F8F8;
         }
-        .vendor{
-            
+        .seat.selected { 
+            background-color: #1DD100 ;
+            color: #FFFFFF;
+        }
+        .seat-point{
+
+        }
+        .seat-point.selected{
+
         }
         .single-row{
             width: 0;
@@ -52,11 +59,6 @@
             text-align: center;
             justify-content: center;
             line-height: 30px;
-        }
-        .seat.selected {
-            
-            background-color: #1DD100;
-            color: #FFFFFF;
         }
         .seat:not(.selected):hover {
             background-color: #ddd;
