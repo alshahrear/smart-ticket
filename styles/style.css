@@ -10,17 +10,8 @@
             padding: 0;
             background-color: #f9f9f9;
         }
-        .container {
-            /* width: 100%;
-            max-width: 100%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            padding: 20px; */
-        }
         .seat-selection {
             width: 100%;
-            /* display: flex; */
             gap: 20px;
             background-color: #fff;
             padding: 15px;
@@ -47,12 +38,6 @@
             background-color: #1DD100 ;
             color: #FFFFFF;
         }
-        .seat-point{
-
-        }
-        .seat-point.selected{
-
-        }
         .single-row{
             width: 0;
             height: 0;
@@ -63,10 +48,7 @@
         .seat:not(.selected):hover {
             background-color: #ddd;
         }
-        .form {
-            /* max-width: 300px;
-            width: 100%; */
-        }
+        
         .form input {
             width: 100%;
             padding: 10px;
@@ -109,13 +91,11 @@
         margin-right: 900px;
 
     }
-    #btn-container{
-        /* position: relative;
-        display: inline-block; */
-    }
-    .input-container{   
-        /* position: relative; */
-        /* display: inline-block;  */
+    #btn-apply:disabled {
+        background-color: #A9A9A9; 
+        cursor: not-allowed; 
+        color: #FFFFFF;
+        opacity: 0.6;
     }
     #input-coupon{
         width: 255px;
