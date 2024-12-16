@@ -1,6 +1,5 @@
-
 document.addEventListener("DOMContentLoaded", () => {
-    
+    // সিট সিলেকশন সেকশনে স্ক্রোল
     const buyTicketButton = document.querySelector("#buy-ticket");
     const paribahanSection = document.querySelector("#paribahan-section");
 
@@ -8,67 +7,75 @@ document.addEventListener("DOMContentLoaded", () => {
         element.preventDefault();
         paribahanSection.scrollIntoView({ behavior: "smooth" });
     });
-});
-// ......................................................
 
-document.addEventListener("DOMContentLoaded", function () {
-  const seats = document.querySelectorAll(".seat"); // All seats
-  const seatCounter = document.getElementById("seat-counter"); // Selected seat count display
-  const seatLeftBtn = document.getElementById("seat-left-btn"); // Remaining seats display
-  const nextBtn = document.getElementById("nextBtn"); // Next button
-  const phoneInput = document.getElementById("phoneNumber"); // Phone number input field
+    // সিট সিলেকশন লজিক
+    const seatCounter = document.getElementById("seat-counter");
+    const seatLeftBtn = document.getElementById("seat-left-btn");
+    const totalPriceElement = document.getElementById("total-price");
+    const grandTotalElement = document.getElementById("grand-total");
+    const nextBtn = document.getElementById("nextBtn");
+    const phoneInput = document.getElementById("phoneNumber");
 
-  let selectedSeats = 0; // Count of selected seats
-  let totalSeats = 40; // Total available seats
+    const pricePerSeat = 550;
+    let selectedSeats = new Set();  // সিলেক্ট করা সিট গুলি স্টোর হবে
+    let totalSeats = 40;
 
-  // Add event listener to each seat
-  seats.forEach((seat) => {
-      seat.addEventListener("click", function () {
-          // Toggle seat selection
-          if (seat.classList.contains("selected")) {
-              seat.classList.remove("selected");
-              selectedSeats--; // Decrease selected seat count
-              totalSeats++; // Increase available seats
-          } else {
-              seat.classList.add("selected");
-              selectedSeats++; // Increase selected seat count
-              totalSeats--; // Decrease available seats
-          }
+    // সিট সিলেকশনে ক্লিক ইভেন্ট অ্যাড করা
+    const seats = document.querySelectorAll(".seat"); // সিট গুলো আগে থেকেই সিলেক্ট করা
 
-          // Update seat count displays
-          seatCounter.textContent = selectedSeats;
-          seatLeftBtn.textContent = totalSeats;
+    seats.forEach(seat => {
+        seat.addEventListener("click", toggleSeatSelection);
+    });
 
-          // Validate form after seat selection
-          validateForm();
-      });
-  });
+    // সিট সিলেকশন টগল করা
+    function toggleSeatSelection(event) {
+        const seat = event.target;
+        const seatId = seat.dataset.seatId;
 
-  // Add input event listener to phone number field
-  phoneInput.addEventListener("input", function () {
-      validateForm(); // Validate form after phone input
-  });
+        if (selectedSeats.has(seatId)) {
+            selectedSeats.delete(seatId);  // সিট নির্বাচন না করা হলে সেট থেকে বাদ দেওয়া
+            seat.classList.remove("selected");  // সিট থেকে "selected" ক্লাস মুছে ফেলা
+            totalSeats++; // সিটের সংখ্যা বাড়ানো
+        } else {
+            selectedSeats.add(seatId);  // সিট নির্বাচন হলে সেটে যোগ করা
+            seat.classList.add("selected");  // সিটে "selected" ক্লাস যোগ করা
+            totalSeats--; // সিটের সংখ্যা কমানো
+        }
 
-  // Function to validate seat selection and phone number
-  function validateForm() {
-      const phoneNumber = phoneInput.value.trim(); // Get phone number value
-      const isPhoneNumberValid = /^[0-9]{10,15}$/.test(phoneNumber); // Validate phone number (10-15 digits)
+        updateSeatDisplay(); // সিটের ডিসপ্লে এবং দাম আপডেট করা
+    }
 
-      // Check if at least one seat is selected and phone number is valid
-      if (selectedSeats > 0 && isPhoneNumberValid) {
-          nextBtn.disabled = false; // Enable the Next button
-          nextBtn.classList.add("enabled");
-      } else {
-          nextBtn.disabled = true; // Disable the Next button
-          nextBtn.classList.remove("enabled");
-      }
-  }
-});
+    // সিটের ডিসপ্লে এবং দাম আপডেট করা
+    function updateSeatDisplay() {
+        const total = selectedSeats.size * pricePerSeat; // নির্বাচিত সিটের মোট মূল্য
+        seatCounter.textContent = selectedSeats.size; // নির্বাচিত সিটের সংখ্যা দেখানো
+        seatLeftBtn.textContent = totalSeats; // অবশিষ্ট সিটের সংখ্যা দেখানো
 
-// ..........................................................
+        totalPriceElement.innerText = `BDT ${total}`; // মোট মূল্য দেখানো
+        grandTotalElement.innerText = `BDT ${total}`; // গ্র্যান্ড টোটাল দেখানো
+        validateForm();
+    }
 
-        document.getElementById('nextBtn').addEventListener('click', function () {
+    // ফর্ম ভ্যালিডেশন (সিট + ফোন নাম্বার)
+    function validateForm() {
+        const phoneNumber = phoneInput.value.trim();
+        const isPhoneNumberValid = /^[0-9]{10,15}$/.test(phoneNumber);
+
+        if (selectedSeats.size > 0 && isPhoneNumberValid) {
+            nextBtn.disabled = false;
+            nextBtn.classList.add("enabled");
+        } else {
+            nextBtn.disabled = true;
+            nextBtn.classList.remove("enabled");
+        }
+    }
+
+    // নেক্সট বাটন ক্লিক করা
+    nextBtn.addEventListener("click", function () {
         document.getElementById('main-ticket-container').classList.add('hidden');
         document.getElementById('success-container').classList.remove('hidden');
-      });
-    
+    });
+
+    // ফোন নাম্বার ইনপুট ইভেন্ট
+    phoneInput.addEventListener("input", validateForm);
+});
